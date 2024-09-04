@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyChat - Realtime Chat App</title>
+
+
+
+
+
+
+    <link rel="stylesheet" href="chatappmenu.css">
+
+
+
+
+
+</head>
+<body>
+   <div id="logo"></div>
+   <div class="chatbox">
+        <div defer class="message left">Welcome To SkyChat</div>
+        <div defer class="message right">Web Project By Krishna</div>
+   </div>
+   <div class="send">
+    <form action="#" id="sendMessage">
+        <input type="text" name="messageInput" id="messageInput" placeholder="Message...">
+        <button class="button" type="submit">Send</button>
+    </form>
+</div>
+</body>
+<script src="http://localhost:8000/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</html>

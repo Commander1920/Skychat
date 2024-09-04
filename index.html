@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application - Main Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="menu-container">
+        <h1>Welcome to SkyChat</h1>
+        <input type="text" id="username" placeholder="Enter your name" maxlength="15">
+        <button id="join-btn" disabled>Join Chat</button>
+    </div>
+
+    <script>
+        const usernameInput = document.getElementById('username');
+        const joinButton = document.getElementById('join-btn');
+
+        usernameInput.addEventListener('input', () => {
+            if (usernameInput.value.trim().length > 0 && usernameInput.value.trim().length <= 15) {
+                joinButton.disabled = false;
+            } else {
+                joinButton.disabled = true;
+            }
+        });
+
+        joinButton.addEventListener('click', () => {
+            const username = usernameInput.value.trim();
+            if (username.length > 0 && username.length <= 15) {
+                localStorage.setItem('username', username);
+                window.location.href = 'Chatroom.html';
+            }
+        });
+    </script>
+</body>
+</html>
